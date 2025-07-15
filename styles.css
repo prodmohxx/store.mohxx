@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  background: black;
+  color: white;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: black;
+}
+nav a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.product-section {
+  padding: 40px;
+  text-align: center;
+}
+.product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.product-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 240px;
+}
+.product-card img {
+  width: 100%;
+}
+.newsletter {
+  background: #222;
+  padding: 40px;
+  text-align: center;
+}
+.newsletter input {
+  padding: 10px;
+  width: 250px;
+  margin-right: 10px;
+}
+.newsletter button {
+  padding: 10px 20px;
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+  color: #777;
+}

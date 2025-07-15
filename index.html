@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mohxx.store</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">MOHXX.STORE</div>
+    <nav>
+      <a href="#merch">MERCH</a>
+      <a href="#music">MUSIC</a>
+      <div class="snipcart-summary">
+        <button class="snipcart-checkout">CART</button>
+      </div>
+    </nav>
+  </header>
+
+  <section id="merch" class="product-section">
+    <h2>MERCH</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="assets/hoodie.jpg" alt="Hoodie" />
+        <h3>Black Hoodie</h3>
+        <p>$60</p>
+        <button class="snipcart-add-item"
+                data-item-id="hoodie-001"
+                data-item-name="Black Hoodie"
+                data-item-price="60.00"
+                data-item-url="/"
+                data-item-description="Premium black hoodie with MOHXX branding.">
+          ADD TO CART
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="music" class="product-section">
+    <h2>MUSIC COLLECTIBLES</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="assets/vinyl.jpg" alt="Vinyl" />
+        <h3>Red Vinyl</h3>
+        <p>$30</p>
+        <button class="snipcart-add-item"
+                data-item-id="vinyl-001"
+                data-item-name="Red Vinyl"
+                data-item-price="30.00"
+                data-item-url="/"
+                data-item-description="Limited edition red vinyl.">
+          ADD TO CART
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <h2>Write your email to subscribe for new releases</h2>
+    <form action="https://YOUR_MAILCHIMP_URL" method="post" target="_blank">
+      <input type="email" name="EMAIL" placeholder="Your email address" required>
+      <button type="submit">SUBSCRIBE</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 MOHXX.STORE — UNFAZED FOREVER RECORDS</p>
+  </footer>
+
+  <div hidden id="snipcart" data-api-key="YOUR_SNIPCART_PUBLIC_API_KEY"></div>
+</body>
+</html>
