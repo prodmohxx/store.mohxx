@@ -1,15 +1,96 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mohxx.store</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
-  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOHXX.STORE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css">
+  <meta name="snipcart-api-key" content="YOUR_SNIPCART_PUBLIC_API_KEY">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Oswald', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #000;
+      border-bottom: 1px solid #222;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo { font-size: 1.6rem; color: white; font-weight: bold; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover { color: red; }
+    .subscribe-section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: #111;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .subscribe-section h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: white;
+    }
+    .subscribe-section input[type=email] {
+      padding: 12px;
+      width: 280px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      background-color: black;
+      color: white;
+    }
+    .subscribe-section button {
+      padding: 12px 22px;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #000;
+      padding: 30px 20px;
+      text-align: center;
+      border-top: 1px solid #222;
+    }
+    .footer-text {
+      color: white;
+      font-size: 14px;
+      margin-bottom: 20px;
+      font-family: 'Oswald', sans-serif;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: red;
+      font-size: 20px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -17,60 +98,28 @@
     <nav>
       <a href="#merch">MERCH</a>
       <a href="#music">MUSIC</a>
-      <div class="snipcart-summary">
-        <button class="snipcart-checkout">CART</button>
-      </div>
+      <a href="#" class="snipcart-checkout">CART</a>
     </nav>
   </header>
 
-  <section id="merch" class="product-section">
-    <h2>MERCH</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="assets/hoodie.jpg" alt="Hoodie" />
-        <h3>Black Hoodie</h3>
-        <p>$60</p>
-        <button class="snipcart-add-item"
-                data-item-id="hoodie-001"
-                data-item-name="Black Hoodie"
-                data-item-price="60.00"
-                data-item-url="/"
-                data-item-description="Premium black hoodie with MOHXX branding.">
-          ADD TO CART
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <section id="music" class="product-section">
-    <h2>MUSIC COLLECTIBLES</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="assets/vinyl.jpg" alt="Vinyl" />
-        <h3>Red Vinyl</h3>
-        <p>$30</p>
-        <button class="snipcart-add-item"
-                data-item-id="vinyl-001"
-                data-item-name="Red Vinyl"
-                data-item-price="30.00"
-                data-item-url="/"
-                data-item-description="Limited edition red vinyl.">
-          ADD TO CART
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <section class="newsletter">
-    <h2>Write your email to subscribe for new releases</h2>
-    <form action="https://YOUR_MAILCHIMP_URL" method="post" target="_blank">
-      <input type="email" name="EMAIL" placeholder="Your email address" required>
+  <section class="subscribe-section">
+    <h3>Write your email to subscribe for new releases</h3>
+    <form>
+      <input type="email" placeholder="Your email address" required>
       <button type="submit">SUBSCRIBE</button>
     </form>
   </section>
 
   <footer>
-    <p>© 2025 MOHXX.STORE — UNFAZED FOREVER RECORDS</p>
+    <div class="footer-text">© 2025 UNFAZED FOREVER RECORDS. ALL RIGHTS RESERVED.</div>
+    <div class="social-icons">
+      <a href="https://instagram.com/prodmohxx" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/prodmohxx" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://youtube.com/@prodmohxx" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://tiktok.com/@prodmohxx" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-spotify"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-apple"></i></a>
+    </div>
   </footer>
 
   <div hidden id="snipcart" data-api-key="YOUR_SNIPCART_PUBLIC_API_KEY"></div>
